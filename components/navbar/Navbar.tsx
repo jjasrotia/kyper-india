@@ -45,27 +45,31 @@ export default function Navbar() {
                 </div>
 
                 {/* Right Button desktop whatsapp */}
-                <div className=" flex ">
-                    <a
-                        href="https://wa.me/917018555172"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden md:inline-flex bg-green-700 hover:bg-green-800  
-                        text-white rounded-md px-3.5 py-2.5 text-sm font-semibold text-white
-                         shadow-xs 
-                       "
-                    >
-                        WhatsApp
-                    </a>
-                    {/* Mobile Hamburger */}
-                    <button
-                        className="md:hidden cursor-pointer"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    >
-                        {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
+                <div className="flex gap-2">
+  <a
+    href="https://wa.me/917018555172"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hidden md:inline-flex bg-green-700 hover:bg-green-800 text-white rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-xs"
+  >
+    WhatsApp
+  </a>
 
-                </div>
+  <Link
+    href="/login"
+    className="hidden md:inline-flex bg-green-700 hover:bg-green-800 text-white rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-xs"
+  >
+    Login
+  </Link>
+
+  {/* Mobile Hamburger */}
+  <button
+    className="md:hidden cursor-pointer"
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  >
+    {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+  </button>
+</div>
 
             </nav>
             {/* Mobile Menu */}
@@ -90,6 +94,14 @@ export default function Navbar() {
                         className="cursor-pointer bg-green-700 text-white rounded-lg px-5 py-3 text-center font-semibold "
                     >
                         WhatsApp
+                    </a>
+                    <a
+                        href="https://wa.me/917018555172"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer bg-green-700 text-white rounded-lg px-5 py-3 text-center font-semibold "
+                    >
+                    Login
                     </a>
                 </div>
             )}
